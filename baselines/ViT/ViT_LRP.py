@@ -10,11 +10,11 @@ from baselines.ViT.helpers import load_pretrained
 from baselines.ViT.weight_init import trunc_normal_
 from baselines.ViT.layer_helpers import to_2tuple
 
-
+#URLとnum_classesを書き換えた
 def _cfg(url='', **kwargs):
     return {
         'url': url,
-        'num_classes': 1000, 'input_size': (3, 224, 224), 'pool_size': None,
+        'num_classes': 2, 'input_size': (3, 224, 224), 'pool_size': None,
         'crop_pct': .9, 'interpolation': 'bicubic',
         'first_conv': 'patch_embed.proj', 'classifier': 'head',
         **kwargs
